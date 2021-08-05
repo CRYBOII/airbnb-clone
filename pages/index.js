@@ -51,12 +51,12 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export const getStaticProps = async () => {
-  const exploreData = await fetch(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/exploreData`
-  ).then((x) => x.json())
-  const cardsData = await fetch(
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/anyWhere`
-  ).then((x) => x.json())
+  const exploreData = await fetch(`${process.env.B_URL}/api/exploreData`).then(
+    (x) => x.json()
+  )
+  const cardsData = await fetch(`${process.env.B_URL}/api/anyWhere`).then((x) =>
+    x.json()
+  )
 
   return {
     props: {
