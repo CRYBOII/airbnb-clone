@@ -51,12 +51,67 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export const getStaticProps = async () => {
-  const exploreData = await fetch(
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/exploreData`
-  ).then((x) => x.json())
-  const cardsData = await fetch(
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/anyWhere`
-  ).then((x) => x.json())
+  const exploreData = [
+    {
+      img: "/images/471d6e78-8e18-403f-828d-8d573b37ba192.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/847cfb7f-788d-42dc-9148-f375348dde76.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/7253e011-7c22-48fd-b75d-d0da35372397.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/e639b7ab-aee3-48ee-9743-216684a51319.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/7253e011-7c22-48fd-b75d-d0da353723973.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/52e8083e-2de2-446d-a860-534eab2505412.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+    {
+      img: "/images/20e74de0-0eb8-4fca-afb8-b111875acdf5.jpg",
+      location: "Bangkok",
+      distance: "45-minute drive",
+    },
+  ]
+
+  const cardsData = [
+    {
+      img: "/images/2f13349d-879d-43c6-83e3-8e5679291d532.jpg",
+      title: "Outdoor getaways",
+    },
+    {
+      img: "/images/36f53e61-db8d-403c-9122-5b761c0e42644.jpg",
+      title: "Unique stays",
+    },
+    {
+      img: "/images/7d82ca14-56e5-4465-8218-dcfa7d69b6ac4.jpg",
+      title: "Entire homes",
+    },
+    {
+      img: "/images/10a638e1-6aff-4313-8033-1275cec839875.jpg",
+      title: "Pets allowed",
+    },
+  ]
 
   return {
     props: {
