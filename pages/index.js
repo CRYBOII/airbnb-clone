@@ -51,12 +51,12 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export const getStaticProps = async () => {
-  const exploreData = await fetch("http://localhost:3000/api/exploreData").then(
-    (x) => x.json()
-  )
-  const cardsData = await fetch("http://localhost:3000/api/anyWhere").then(
-    (x) => x.json()
-  )
+  const exploreData = await fetch(
+    "https://airbnb-clone-kill.vercel.app/exploreData"
+  ).then((x) => x.json())
+  const cardsData = await fetch(
+    "https://airbnb-clone-kill.vercel.app/anyWhere"
+  ).then((x) => x.json())
 
   return {
     props: {
