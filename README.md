@@ -1,6 +1,7 @@
 ## Airbnb.com clone with React  & Tailwind css
 
 ***First page demo***
+<br/>
 ![enter image description here](https://i.imgur.com/BeVgLBQ.gif)
 
 
